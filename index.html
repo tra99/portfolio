@@ -590,6 +590,9 @@ button {
                                     <i class='bx bx-grid-alt'></i> portfolio
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects Mobile App</span></h1>
+                                <h2 style="color: white;">Cammotor App</h2>
+                                <p>Cammotor is an ecommerce application that users can buy accessories motor with the best price.</p>
+                                <h2 style="color: white;">Technologies</h2>
                                 <p style="font-weight: bold;"><span>Frontend: Dart/Flutter</span></p>
                                 <p style="font-weight: bold;">Backend: PHP/Laravel</p>
                                 <p style="font-weight: bold;">Database: MySQL</p>
@@ -635,8 +638,42 @@ button {
                             </div>
         
                         </div>
+                        <div class="portfolio-content content-width" style="margin-top: 50px;">
+                            <div class="section-header">
+                                <!-- <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects Mobile App</span></h1> -->
+                                <h2 style="color: white;">Classroom Chat</h2>
+                                <p>Classroom chat is an application that is similar with messenger but it focus on students. They can create a group and add members to do discussion. Moreover, it also has chatgpt service that could push their study to another next step.</p>
+                                <h2 style="color: white;">Technologies</h2>
+                                <p style="font-weight: bold;"><span>Frontend: Dart/Flutter</span></p>
+                                <p style="font-weight: bold;">Backend: Firebase</p>
+                                <p style="font-weight: bold;">Database: Firestore</p>
+                            </div>
+        
+                            <div class="row portfolio-items">
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-full">
+                                        <div class="slider">
+                                            <div class="slides">
+                                              <img src="./assets/images/a1.jpg" alt="Image 1">
+                                              <img src="./assets/images/a2.jpg" alt="Image 2">
+                                              <img src="./assets/images/a3.jpg" alt="Image 3">
+                                              <img src="./assets/images/a4.jpg" alt="Image 4">
+                                              <img src="./assets/images/a5.jpg" alt="Image 5">
+                                              <img src="./assets/images/a6.jpg" alt="Image 6">
+                                              <img src="./assets/images/a7.jpg" alt="Image 7">
+                                            </div>
+                                            <button class="prev" onclick="prevSlide()">&#10094;</button>
+                                            <button class="next" onclick="nextSlide()">&#10095;</button>
+                                          </div>
+                                        <!-- <h2><a href="https://erobotkh.us">E-Robot Website</a></h2> -->
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
                     </div>
                 </section>
+                
             </div>
         </div>
     </main>
@@ -646,29 +683,32 @@ button {
         showSlide(slideIndex);
 
         function nextSlide() {
-        showSlide(slideIndex += 1);
+            showSlide(slideIndex + 1);
         }
 
         function prevSlide() {
-        showSlide(slideIndex -= 1);
+            showSlide(slideIndex - 1);
         }
 
         function showSlide(n) {
-        const slides = document.querySelectorAll('.slides img');
-        if (n >= slides.length) {
-            slideIndex = 0;
+            const slides = document.querySelectorAll('.slides img');
+            if (n >= slides.length) {
+                slideIndex = 0;
+            } else if (n < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = n;
+            }
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            });
         }
-        if (n < 0) {
-            slideIndex = slides.length - 1;
-        }
-        slides.forEach(slide => {
-            slide.style.transform = `translateX(-${slideIndex * 100}%)`;
-        });
-        }
+
         // Automatic slide change every 3 seconds
         setInterval(() => {
-        nextSlide();
+            nextSlide();
         }, 3000);
+
     </script>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
