@@ -68,6 +68,20 @@ button {
 .next {
   right: 0;
 }
+.download-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .download-button:hover {
+        background-color: #0056b3;
+    }
 
 </style>
 <body>
@@ -353,8 +367,12 @@ button {
                     <div class="custom-container">
                         <div class="resume-content content-width">
                             <div class="section-header">
-                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="bx bx-briefcase"></i> Resume
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom" style="display: flex; justify-content: space-between;">
+                                    <div><i class="bx bx-briefcase"></i> Resume</div>
+                                    <div>
+                                        
+                                        <button class="download-button" onclick="downloadPDF()">Resume PDF</button>
+                                    </div>
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom"><span>Experience</span></h1>
                             </div>
@@ -666,6 +684,7 @@ button {
                                             <button class="next" onclick="nextSlide()">&#10095;</button>
                                           </div>
                                         <!-- <h2><a href="https://erobotkh.us">E-Robot Website</a></h2> -->
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -708,6 +727,26 @@ button {
         setInterval(() => {
             nextSlide();
         }, 3000);
+
+    function downloadPDF() {
+    const pdfUrl = 'assets/images/Resume.pdf'; // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
+    const fileName = 'Hok_Sochetra_Resume'; // Specify the file name for the downloaded file
+
+    fetch(pdfUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => console.error('Error downloading the PDF file:', error));
+    }
+
 
     </script>
     <script src="./assets/js/jquery.js"></script>
