@@ -329,15 +329,15 @@ button {
         
                             <div class="facts d-flex">
                                 <div class="left scroll-animation" data-animation="fade_from_left">
-                                    <h1>1+</h1>
+                                    <h1>1</h1>
                                     <p>Year of <br>Experience</p>
                                 </div>
                                 <div class="right scroll-animation" data-animation="fade_from_right">
-                                    <h1>1</h1>
+                                    <h1>3</h1>
                                     <p>project completed </p>
                                 </div>
                                 <div class="right scroll-animation" data-animation="fade_from_right">
-                                    <h1>2</h1>
+                                    <h1>0</h1>
                                     <p>projects holding </p>
                                 </div>
                             </div>
@@ -384,9 +384,14 @@ button {
                                     <p>SPORTMAZING CO., LTD.</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <span class="date">June, 2022 –  
+                                    <span class="date">June, 2023 –  
                                         January, 2024 </span>
-                                    <h2>Freelancer Flutter Project</h2>
+                                    <h2>Freelancer</h2>
+                                </div>
+                                <div class="item scroll-animation" data-animation="fade_from_right">
+                                    <span class="date">1st July to 30th
+                                        September 2024</span>
+                                    <h2>Flutter Internship</h2>
                                 </div>
                                 
                             </div>
@@ -585,14 +590,8 @@ button {
                                         </div>
                                         <p class="name">MySQL</p>
                                     </div>
-                                </div>
-                                
-                                
-                                
-                                
-                                
+                                </div>  
                             </div>
-        
                         </div>
                     </div>
                 </section>
@@ -600,12 +599,56 @@ button {
         
                 <section class="portfolio-area page-section scroll-to-page" id="portfolio">
                     <div class="custom-container">
+                        
                         <div class="portfolio-content content-width">
                             <div class="section-header">
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
                                     <i class='bx bx-grid-alt'></i> portfolio
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects Mobile App</span></h1>
+                                <div class="portfolio-content content-width">
+                                    <div class="section-header">
+                                        <br>
+                                        <h2 style="color: white;">Aroon HR</h2>
+                                        <p>Aroon HR is a hybrid HR management software developed with Flutter and Laravel that includes features like attendance tracking, leave management, and real-time notification. Supporting numerous user roles and languages, including Khmer, improves accessibility and employee engagement. The app aims to improve corporate efficiency, accuracy, and security.</p>
+                                        <h2 style="color: white;">Technologies</h2>
+                                        <p style="font-weight: bold;"><span>Frontend: Dart/Flutter</span></p>
+                                        <p style="font-weight: bold;">Backend: PHP/Laravel</p>
+                                        <p style="font-weight: bold;">Database: MySQL</p>
+                                    </div>
+                
+                                    <div class="row portfolio-items">
+                                        <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                            <div class="portfolio-item portfolio-full">
+                                                <div class="slider">
+                                                    <div class="slides">
+                                                      <img src="./assets/images/hr/h1.jpg" alt="Image 1">
+                                                      <img src="./assets/images/hr/h2.jpg" alt="Image 2">
+                                                      <img src="./assets/images/hr/h3.jpg" alt="Image 3">
+                                                      <img src="./assets/images/hr/h4.jpg" alt="Image 4">
+                                                      <img src="./assets/images/hr/h5.jpg" alt="Image 5">
+                                                      <img src="./assets/images/hr/h6.jpg" alt="Image 6">
+                                                      <img src="./assets/images/hr/h7.jpg" alt="Image 7">
+                                                      <img src="./assets/images/hr/h8.jpg" alt="Image 8">
+                                                      <img src="./assets/images/hr/h9.jpg" alt="Image 9">
+                                                      <img src="./assets/images/hr/h10.jpg" alt="Image 10">
+                                                      <img src="./assets/images/hr/h11.jpg" alt="Image 11">
+                                                      <img src="./assets/images/hr/h12.jpg" alt="Image 12">
+                                                      <img src="./assets/images/hr/h13.jpg" alt="Image 13">
+                                                      <img src="./assets/images/hr/h14.jpg" alt="Image 14">
+                                                      <img src="./assets/images/hr/h15.jpg" alt="Image 15">
+                                                      <img src="./assets/images/hr/h16.jpg" alt="Image 16">
+                                                      
+                                                    </div>
+                                                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                                                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                                <br>
                                 <h2 style="color: white;">Cammotor App</h2>
                                 <p>Cammotor is an e-commerce application where users can buy motorcycle accessories at the best prices.</p>
                                 <h2 style="color: white;">Technologies</h2>
@@ -636,6 +679,7 @@ button {
                             </div>
         
                         </div>
+                        
                         <div class="portfolio-content content-width" style="margin-top: 50px;">
                             <div class="section-header">
                                 <!-- <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects Mobile App</span></h1> -->
@@ -793,8 +837,8 @@ button {
         }, 3000);
 
     function downloadPDF() {
-    const pdfUrl = 'assets/images/Resume.pdf'; // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF file
-    const fileName = 'Hok_Sochetra_Resume'; // Specify the file name for the downloaded file
+    const pdfUrl = 'assets/images/Hok_Sochetra_CV.pdf'; 
+    const fileName = 'Hok_Sochetra_Resume'; 
 
     fetch(pdfUrl)
         .then(response => response.blob())
