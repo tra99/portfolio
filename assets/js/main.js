@@ -118,104 +118,14 @@ $(function(){
         }
     }
 
-    // function remove_is_active() {
-    //     $(".menu .scroll-to").removeClass("active");
-    // }
-
-    // gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-    // var container = document.querySelector("#smooth-content");
-
-    // var height;
-    // function setHeight() {
-    //     height = container.clientHeight;
-
-
-    //     document.body.style.height = height + "px";
-    // }
-    // ScrollTrigger.addEventListener("refreshInit", setHeight);
-
-    // gsap.to(container, {
-    //     y: () => -(height - document.documentElement.clientHeight),
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: container,
-    //         start: "top top",
-    //         end: "bottom bottom",
-    //         scrub: 1,
-    //         invalidateOnRefresh: true,
-    //     }
-    // });
-
     window.addEventListener('scroll', {
         scroll_animations,
     });
-
-
-    // Array.prototype.slice.call(document.querySelectorAll(".page-section")).forEach(function (e, t) {
-    //     ScrollTrigger.create({
-    //         trigger: e,
-    //         id: t + 1,
-    //         start: "top center",
-    //         end: function () {
-    //             return "+=".concat(e.clientHeight - 30);
-    //         },
-    //         toggleActions: "play reverse none reverse",
-    //         toggleClass: { targets: e, className: "active" },
-    //         onToggle: function () {
-    //             $(".menu .scroll-to").removeClass("active"), "" != e.id && $('.menu .scroll-to[href*="#' + e.id + '"]').addClass("active");
-    //         },
-    //     });
-    // });
-
-    // document.querySelectorAll('.scroll-to').forEach((e) => {
-    //     const target = e.getAttribute('href');
-    //     const targetEl = document.querySelector(target);
-    //     // const targetRect = targetEl.getBoundingClientRect();
-
-
-    //     var offset = gsap.getProperty("#smooth-content", "y");
-    //     var position = jQuery(target).get(0).getBoundingClientRect().top - offset;
-    
-
-    //     e.addEventListener('click', (e) => {
-    //         e.preventDefault();
-
-    //         gsap.to(window, {
-    //             scrollTo: position,
-    //             ease: "power4",
-    //             duration: 0.1,
-    //             onToggle: function () {
-    //                 console.log('toggle');
-    //                 remove_is_active();
-    //                 if (targetEl.id != "") $('.menu .scroll-to[href*="#' + targetEl.id + '"]').addClass("active");
-    //             },
-    //             onLeaveBack: function () {
-    //                 console.log('leave back');
-    //                 remove_is_active();
-    //                 if (targetEl.id != "") $('.menu .scroll-to[href*="#' + targetEl.id + '"]').addClass("active");
-    //             },
-    //             onLeave: function () {
-    //                 console.log('leave');
-    //                 remove_is_active();
-    //                 if (targetEl.id != "") $('.menu .scroll-to[href*="#' + targetEl.id + '"]').addClass("active");
-    //             },
-    //             overwrite: !0,
-    //         });
-    //     });
-
-        
-    
-    // });
-
 });
 
 
 
 function scroll_animations() {
-    // var allow_on_mobile = !0;
-    // if (typeof config_scroll_animation_on_mobile !== "undefined") allow_on_mobile = config_scroll_animation_on_mobile;
-    // if (allow_on_mobile == !1 && is_mobile_device) return;
     var defaults = {
         duration: 1.2,
         ease: "power4.out",
